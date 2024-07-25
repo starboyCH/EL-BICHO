@@ -4,20 +4,19 @@
    box-sizing: border-box;
 }
 body{
-   height: 200vh;
+   height: 200dvh;
    display: flex;
    background-image: url('giphy.gif');
    background-position: center;
    background-size: cover;
    flex-direction: column;
-   font-family: sans-serif;
    justify-content: center;
    align-items: center;
 }
 img{
    animation: appear both, grow-img both;
    filter: grayscale(95%);
-   max-height: 100vh;
+   max-height: 100dvh;
 }
 .bicho{
    display: flex;
@@ -65,7 +64,7 @@ img, .bicho{
       width: 95vw;
    }
 }
-@media(min-width: calc(100vh*0.9)){
+@media(min-width: calc(100dvh*0.9)){
    .bicho{
       mix-blend-mode: difference;
       justify-content: space-between;
