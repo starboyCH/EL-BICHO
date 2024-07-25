@@ -11,6 +11,7 @@ body{
    background-size: cover;
    flex-direction: column;
    justify-content: center;
+   font-family: sans-serif;
    align-items: center;
 }
 img{
