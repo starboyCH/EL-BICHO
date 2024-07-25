@@ -1,0 +1,74 @@
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+body{
+   height: 200vh;
+   display: flex;
+   background-image: url('giphy.gif');
+   background-position: center;
+   background-size: cover;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+img{
+   animation: appear both, grow-img both;
+   filter: grayscale(95%);
+   max-height: 100vh;
+}
+.bicho{
+   display: flex;
+   animation: appear both, move both;
+   font-size: clamp(1.2rem, 7.3vw, 9rem);
+   font-weight: 900;
+   justify-content: space-around;
+   color: #f13;
+   text-shadow: 0 0 8px #F139;
+   filter: drop-shadow(0 0 8px #F139);
+   text-align: center;
+   margin: auto;
+}
+img, .bicho{
+   position: fixed;
+   animation-timeline: scroll();
+}
+@keyframes appear{
+   0%{
+      opacity: 0%;
+   }
+   100%{
+      opacity: 100%;
+   }
+}
+@keyframes grow-img{
+   0%{
+      max-width: 1vw;
+      top: 0;
+   }
+   100%{
+      max-width: 100vw;
+      top: 50%;
+      transform: translateY(-50%);
+   }
+}
+@keyframes move {
+   0%{
+      bottom: 0;
+      width: 70vw;
+   }
+   100%{
+      bottom: 50%;
+      transform: translateY(50%);
+      width: 95vw;
+   }
+}
+@media(min-width: calc(100vh*0.9)){
+   .bicho{
+      mix-blend-mode: difference;
+      justify-content: space-between;
+      text-shadow: 0 0 8px #F139;
+      filter: drop-shadow(0 0 8px #f139) grayscale(95%);
+   }
+}
